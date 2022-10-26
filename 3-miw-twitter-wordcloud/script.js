@@ -6,17 +6,18 @@ async function drawVisualisation() {
     visualisation.showLoading();
 
     // Haal data op.
-    let mijnData = '';
+    let mijnData = [
+        { name: 'Test', value: 5, },
+        { name: 'Hello', value: 3 },
+        { name: 'Datavisualisatie', value: 10 }
+    ];
 
     // Configureer de visualisatie.
     /** @type EChartsOption */
     let option = {
         series: [{
             type: 'wordCloud',
-            data: [{
-                name: 'Test',
-                value: 1,
-            }]
+            data: mijnData
         }]
     };
 
